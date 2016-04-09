@@ -37,3 +37,8 @@ run(10);
 // as 1 + 30
 console.log(`Meaning of life: ${run(30).value}`);
 
+// NOTE: although we have reached the final possible value of the run generator function,
+// it is technically not finished and will remain in a paused state unless called again.
+// Generators are not required to run to completion aka done: true
+// - it is ok to only partially consume a generator
+// - when reference to the generator is discarded it will be garbage collected.
