@@ -32,4 +32,36 @@ function getFile(file) {
 // but only once previous rendering
 // is done.
 
-// ???
+
+// Solution 1
+/*ASQ()
+.runner(function *main() {
+	var p1 = getFile('file1');
+	var p2 = getFile('file2');
+	var p3 = getFile('file3');
+
+	var text1 = yield p1;
+	output(text1);
+
+	var text2 = yield p2;
+	output(text2);
+
+	var text3 = yield p3;
+	output(text3);
+
+	output('Complete!');
+});*/
+
+// Solution 2
+ASQ()
+.runner(function *main() {
+	var p1 = getFile('file1');
+	var p2 = getFile('file2');
+	var p3 = getFile('file3');
+
+	output(yield p1);
+	output(yield p2);
+	output(yield p3);
+
+	output('Complete!');
+});
