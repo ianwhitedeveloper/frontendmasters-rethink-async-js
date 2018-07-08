@@ -36,7 +36,7 @@ getFile('file1')
 })
 .then(function(text) {
 	output(text);
-	return getFile('file');
+	return getFile('file3');
 })
 .then(function(text) {
 	output(text);
