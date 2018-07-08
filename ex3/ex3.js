@@ -21,7 +21,7 @@ function output(text) {
 
 function getFile(file) {
 	return new Promise(
-		function (res, rej) {
+		function (resolve, rej) {
 			fakeAjax(file, resolve);
 		}
 	);
